@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful photographs</p>
+    </header>
+
+    <div class="filters">
+        <button onclick="filterImages('all')">All</button>
+        <button onclick="filterImages('nature')">Nature</button>
+        <button onclick="filterImages('city')">City</button>
+        <button onclick="filterImages('animals')">Animals</button>
+    </div>
+
+    <div class="gallery">
+
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600"
+             data-category="nature" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600"
+             data-category="city" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600"
+             data-category="animals" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=600"
+             data-category="nature" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600"
+             data-category="city" onclick="openLightbox(this)">
+
+        <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=600"
+             data-category="animals" onclick="openLightbox(this)">
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <button class="close" onclick="closeLightbox()">×</button>
+        <button onclick="changeImage(-1)">❮</button>
+        <img id="largeImage">
+        <button onclick="changeImage(1)">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
